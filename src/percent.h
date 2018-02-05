@@ -55,10 +55,10 @@ public:
 	percentage operator/=(const unsigned int i) { percentage p(i); this->divp(p); percentage r(this->value); return r; }
 	percentage operator*=(const unsigned int i) { percentage p(i); this->mulp(p); percentage r(this->value); return r; }
 	percentage operator%=(const unsigned int i) { percentage p(i); this->modp(p); percentage r(this->value); return r; }
-	percentage operator++()						          { this->realloc(this->value+1); percentage r(this->value); return r; }
-	percentage operator++(int)					        { percentage p(this->value); this->realloc(this->value+1); return p; }
-	percentage operator--()						          { this->realloc(this->value-1); percentage r(this->value); return r; }
-	percentage operator--(int) 					        { percentage p(this->value); this->realloc(this->value-1); return p; }
+	percentage operator++()			    { this->realloc(this->value+1); percentage r(this->value); return r; }
+	percentage operator++(int)		    { percentage p(this->value); this->realloc(this->value+1); return p; }
+	percentage operator--()			    { this->realloc(this->value-1); percentage r(this->value); return r; }
+	percentage operator--(int) 		    { percentage p(this->value); this->realloc(this->value-1); return p; }
 
 private:
 	// Math functions for operators
