@@ -70,9 +70,9 @@ int main(int argc, char **argv)
 
 	p.realloc(74);
 	std::cout << "P is now 74" << std::endl;
-	std::cout << "P.toInt() +1 =>\t\t\t\t " 				<< p.toInt()+1 				<< std::endl;
-	std::cout << "P.toFloat() +0.5 =>\t\t\t " 				<< p.toFloat()+0.5 			<< std::endl;
-	std::cout << "P.toDouble() -0.43253234523 =>\t\t " 		<< p.toDouble()-0.43253234523 	<< std::endl;
+	std::cout << "P.toInt() +1 =>\t\t\t\t " 		<< p.toInt()+1 			<< std::endl;
+	std::cout << "P.toFloat() +0.5 =>\t\t\t " 		<< p.toFloat()+0.5 		<< std::endl;
+	std::cout << "P.toDouble() -0.43253234523 =>\t\t " 	<< p.toDouble()-0.43253234523 	<< std::endl;
 	std::cout << "P.toString().append(\"str\") =>\t\t " 	<< p.toString().append("str") 	<< std::endl;
 	return 0;
 }
