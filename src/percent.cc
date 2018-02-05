@@ -51,7 +51,7 @@ void percentage::modp(percentage p)
 int 		percentage::toInt(void) 	{ return (int)value; 				}
 float 		percentage::toFloat(void) 	{ return (float)value; 				}
 double 		percentage::toDouble(void) 	{ return (double)value; 			}
-std::string percentage::toString(void) 	{ return std::to_string(value); 	}
+std::string percentage::toString(void) 	        { return std::to_string(value); 		}
 
 // Exponentiation using a multiplication-loop
 void percentage::expp(unsigned int e) { 
