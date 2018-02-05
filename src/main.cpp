@@ -45,17 +45,17 @@ public:
 	percentage operator+(const unsigned int i)  { percentage r(this->value + i); return r; }
 	percentage operator-(const unsigned int i)  { percentage r(this->value - i); return r; }
 	percentage operator/(const unsigned int i)  { percentage r(this->value / i); return r; }
-	percentage operator*(const unsigned int i) 	{ percentage r(this->value * i); return r; }
-	percentage operator%(const unsigned int i) 	{ percentage r(this->value % i); return r; }
+	percentage operator*(const unsigned int i)  { percentage r(this->value * i); return r; }
+	percentage operator%(const unsigned int i)  { percentage r(this->value % i); return r; }
 	percentage operator+=(const unsigned int i) { percentage p(i); this->addp(p); percentage r(this->value); return r; }
 	percentage operator-=(const unsigned int i) { percentage p(i); this->subp(p); percentage r(this->value); return r; }
 	percentage operator/=(const unsigned int i) { percentage p(i); this->divp(p); percentage r(this->value); return r; }
 	percentage operator*=(const unsigned int i) { percentage p(i); this->mulp(p); percentage r(this->value); return r; }
 	percentage operator%=(const unsigned int i) { percentage p(i); this->modp(p); percentage r(this->value); return r; }
-	percentage operator++()						{ this->realloc(this->value+1); percentage r(this->value); return r; }
-	percentage operator++(int)					{ percentage p(this->value); this->realloc(this->value+1); return p; }
-	percentage operator--()						{ this->realloc(this->value-1); percentage r(this->value); return r; }
-	percentage operator--(int) 					{ percentage p(this->value); this->realloc(this->value-1); return p; }
+	percentage operator++()			    { this->realloc(this->value+1); percentage r(this->value); return r; }
+	percentage operator++(int)		    { percentage p(this->value); this->realloc(this->value+1); return p; }
+	percentage operator--()			    { this->realloc(this->value-1); percentage r(this->value); return r; }
+	percentage operator--(int) 		    { percentage p(this->value); this->realloc(this->value-1); return p; }
 
 private:
 	// Math functions for operators
@@ -192,9 +192,9 @@ int main(int argc, char **argv)
 
 	p.realloc(74);
 	std::cout << "P is now 74" << std::endl;
-	std::cout << "P.toInt() +1 =>\t\t\t\t " 				<< p.toInt()+1 					<< std::endl;
-	std::cout << "P.toFloat() +0.5 =>\t\t\t " 				<< p.toFloat()+0.5 				<< std::endl;
-	std::cout << "P.toDouble() -0.43253234523 =>\t\t " 		<< p.toDouble()-0.43253234523 	<< std::endl;
+	std::cout << "P.toInt() +1 =>\t\t\t\t " 		<< p.toInt()+1 			<< std::endl;
+	std::cout << "P.toFloat() +0.5 =>\t\t\t " 		<< p.toFloat()+0.5 		<< std::endl;
+	std::cout << "P.toDouble() -0.43253234523 =>\t\t " 	<< p.toDouble()-0.43253234523 	<< std::endl;
 	std::cout << "P.toString().append(\"str\") =>\t\t " 	<< p.toString().append("str") 	<< std::endl;
 	return 0;
 }
